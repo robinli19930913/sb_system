@@ -2,7 +2,6 @@ package com.cn.system.dao.mapper;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
