@@ -1,18 +1,28 @@
 package com.cn.system;
 
+import com.cn.system.web.aop.WebInit;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 
 /**
  * Created by robin on 2018/4/18.
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = MongoAutoConfiguration.class)
+@ComponentScan({"com.cn.system.web.api","com.cn.system.web.service"})
+@MapperScan({"com.cn.system.dao.mapper"})
+
+@Import({WebInit.class})
 public class SystemApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
+        System.out.println("开始启动！");
         SpringApplication.run(SystemApplication.class, args);
-        System.out.println("成功！");
+        System.out.println("启动成功！");
     }
 
     @Override
