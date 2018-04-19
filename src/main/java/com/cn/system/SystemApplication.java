@@ -18,7 +18,11 @@ import org.springframework.context.annotation.Import;
 @MapperScan({"com.cn.system.dao.mapper"})
 
 @Import({WebInit.class})
-public class SystemApplication {
+public class SystemApplication extends SpringBootServletInitializer {
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SystemApplication.class);
+    }
 
     public static void main(String[] args) {
         System.out.println("开始启动！");
