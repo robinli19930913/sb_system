@@ -1,0 +1,43 @@
+//省
+$("#sheng4").combobox({
+	width:"80px",
+	url:"most/getsheng.do",
+	method:"get",
+	textField:"name",
+	valueField:"id"
+});
+$('#sheng4').combobox({  
+      onChange: function (newValue, oldValue) {  
+    	$("#qu4").combobox("clear");
+		//市
+		$("#shi4").combobox({
+			width:"80px",
+			url:"most/getshi.do?id="+newValue,
+			method:"get",
+			textField:"name",
+			valueField:"id"
+		});
+      }  
+  });
+$('#shi4').combobox({  
+      onChange: function (newValue, oldValue) {  
+    	  //$("#qu").combobox("clear");
+		//区
+		$("#qu4").combobox({
+			width:"80px",
+			url:"most/getqu.do?id="+newValue,
+			method:"get",
+			textField:"name",
+			valueField:"id"
+		});
+      }  
+  });
+//市
+$("#shi4").combobox({
+	width:"80px"
+});
+//区
+$("#qu4").combobox({
+	width:"80px"
+});
+			
