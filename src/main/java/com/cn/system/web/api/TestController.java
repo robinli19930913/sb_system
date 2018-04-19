@@ -2,6 +2,7 @@ package com.cn.system.web.api;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by robin on 2018/4/18.
@@ -16,6 +17,13 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test(){
+        System.out.println("index.......");
         return "index";
+    }
+    @RequestMapping("/test1")
+    public ModelAndView test1(ModelAndView modelAndView){
+        System.out.println("index.......");
+        modelAndView.setViewName("index");
+        return modelAndView;
     }
 }
