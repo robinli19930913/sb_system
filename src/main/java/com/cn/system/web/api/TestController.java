@@ -20,6 +20,10 @@ public class TestController {
         System.out.println("index.......");
         return "index";
     }
+    @RequestMapping("/test/test/test")
+    public void test2(){
+        System.out.println("index.......");
+    }
     @RequestMapping("/test1")
     public ModelAndView test1(ModelAndView modelAndView){
         System.out.println("index.......");
