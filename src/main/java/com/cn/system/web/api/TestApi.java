@@ -1,5 +1,6 @@
 package com.cn.system.web.api;
 
+import com.cn.system.web.apiversion.ApiVersion;
 import com.cn.system.web.service.TestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by robin on 2018/4/18.
  */
+@ApiVersion("1.0.1")
 @Controller
 @RequestMapping("/api/")
 public class TestApi {

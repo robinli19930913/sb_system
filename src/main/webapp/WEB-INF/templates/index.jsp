@@ -3,9 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>管理系统</title>
-	<link rel="icon" href="${pageContext.request.contextPath }/img/mobo.ico" type="img/x-ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>管理系统</title>
+	<link rel="icon" href="${pageContext.request.contextPath }/img/favicon.ico" type="img/x-ico">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/easyui/themes/gray/easyui.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/easyui/themes/icon.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/ztree/css/metroStyle/metroStyle.css" type="text/css">
@@ -50,11 +54,10 @@
 
 	<!--头部栏 -->
 	<div class="wu-header"  data-options="region:'north',border:false,split:false" style="height:71px">
-		<div class="wu-header-left" style="margin-top: 26px;">
-			<span style="font-size: 24px;color: white;">logo位置</span>
-			<%-- <img alt="" src="${pageContext.request.contextPath }/img/logo.png" height="40px" width="122px"/> --%>
+		<div class="wu-header-left" style="margin-top: 13px;">
+			 <img alt="" src="${pageContext.request.contextPath }/img/logo.png" height="48px" width="113px"/>
+			 <span style="font-size: 24px;margin-left: -21px;position: relative;top: -15px;color: white;">管理系统</span>
 		</div>
-		<div align="center" style="margin-top: 26px;"><span style="font-size: 24px;color: white;">经典模版1.0</span></div>
 		<div class="wu-header-right" style="margin-top: 12px;">
             <p></p >
             <p><strong class="easyui-tooltip">${user.nickName}</strong>，欢迎您！ <a href="${pageContext.request.contextPath }/layout.do" style="color: #5BD1F8;">[注销]</a></p >
