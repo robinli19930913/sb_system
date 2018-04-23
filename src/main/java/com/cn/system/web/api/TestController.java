@@ -1,5 +1,6 @@
 package com.cn.system.web.api;
 
+import com.cn.system.web.apiversion.ApiVersion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Created by robin on 2018/4/18.
  */
+@ApiVersion("1.0.2")
 @Controller
 public class TestController {
     private static final Logger log = LoggerFactory.getLogger(TestController.class);

@@ -24,4 +24,10 @@ public class TestApi {
     public List test(String name){
         return testService.getUserInfos(name);
     }
+
+    @RequestMapping("test1")
+    @ResponseBody
+    public String test1(String name){
+        return "1.0.1";
+    }
 }
