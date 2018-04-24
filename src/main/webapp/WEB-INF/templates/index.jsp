@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/easyui/themes/icon.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/ztree/css/metroStyle/metroStyle.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/wu.css" />
-	
+
 	<script type="text/javascript" src="${pageContext.request.contextPath }/easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/ztree/js/jquery.ztree.core.js"></script>
@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/menu.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/formatter.js"></script>
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/index.css" />
-	
+	<script type="text/javascript" src="${pageContext.request.contextPath }/echarts/js/echarts-all-3.js"></script>
 	<script type="text/javascript">
 	//点击左侧菜单给右边打开页面并显示内容
 	function addTab(name,url){
@@ -44,7 +44,7 @@
 	/*菜单初始化*/
 	$(function () {
 		//动态添加左侧菜单栏
-		//$("#nav_dot").html(<%=request.getAttribute("menu")%>);
+		$("#nav_dot").html(<%=request.getAttribute("menu")%>);
 		//navList(<%=request.getAttribute("length")%>);
 		navList(12);//菜单展示数量
 	});

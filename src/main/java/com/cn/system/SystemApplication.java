@@ -1,7 +1,7 @@
 package com.cn.system;
 
-import com.cn.system.web.aop.WebMvcConfigurerAdapterInit;
 import com.cn.system.web.aop.WebInit;
+import com.cn.system.web.aop.WebMvcConfigurerAdapterInit;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +17,6 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication(exclude = MongoAutoConfiguration.class)
 @ComponentScan({"com.cn.system.web.api","com.cn.system.web.service"})
 @MapperScan({"com.cn.system.dao.mapper"})
-
 @Import({WebInit.class, WebMvcConfigurerAdapterInit.class})
 public class SystemApplication extends SpringBootServletInitializer {
     @Override

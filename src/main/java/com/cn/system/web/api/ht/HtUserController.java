@@ -30,7 +30,12 @@ public class HtUserController {
 		req.getSession().invalidate();
 		return "redirect:/";
 	}
-    
+
+	@RequestMapping("/")
+	public String login(HttpServletRequest req){
+		return "login";
+	}
+
     @RequestMapping("login")
     @ResponseBody
     public BaseResult login(HttpServletRequest req, HttpServletResponse res, String username, String password){
@@ -86,10 +91,12 @@ public class HtUserController {
 				Long id = pt.getId();
 				List<MenuTree> cList = cMap.get(id+"");
 				sf.append("<li>");
-				sf.append("<h4 class=\\\"M1\\\"><span></span>"+pt.getName()+"</h4>");
+				sf.append("<h4 class=\\\""+pt.getIcon()+"\\\"><span></span>"+pt.getName()+"</h4>");
 				sf.append("<div class=\\\"list-item none\\\">");
-				for(MenuTree ct : cList){
-					sf.append("<a href=\\\"#\\\" onclick=\\\"addTab(\'"+ct.getName()+"\',\'"+ct.getUrl()+"\')\\\">"+ct.getName()+"</a>");
+				if(cList != null && cList.size() > 0){
+					for(MenuTree ct : cList){
+						sf.append("<a href=\\\"#\\\" onclick=\\\"addTab(\'"+ct.getName()+"\',\'"+ct.getUrl()+"?urlName="+pt.getName()+"-"+ct.getName()+"\')\\\">"+ct.getName()+"</a>");
+					}
 				}
 				sf.append("</div>");
 				sf.append("</li>");

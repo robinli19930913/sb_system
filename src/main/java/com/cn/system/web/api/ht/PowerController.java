@@ -6,6 +6,7 @@ import com.cn.system.dao.bean.Combotree;
 import com.cn.system.dao.model.HtUser;
 import com.cn.system.dao.model.MenuTree;
 import com.cn.system.dao.model.Roles;
+import com.cn.system.web.service.ht.PowerServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

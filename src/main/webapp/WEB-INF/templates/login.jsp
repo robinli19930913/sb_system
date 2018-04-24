@@ -22,20 +22,14 @@
     <script type="text/javascript" src="${pageContext.request.contextPath }/assets/js/supersized-init.js"></script>
 </head>
 <body>
-<div class="page-container" style="width:400px;padding:50px 60px;margin-top: 100px" align="center">
+<div class="page-container">
 <h1>登录页面</h1>
 <form id="login_form" method="post">
-	<div style="margin-bottom:20px">
-		<input type="text" id="username" name="username" class="username" placeholder="请输入账号" style="width:90%;height:34px;padding:10px;">
-	</div>
-	<div style="margin-bottom:20px">
-		<input type="password" id="password" name="password" class="password" placeholder="请输入密码" style="width:90%;height:34px;padding:10px">
-	</div>
+	<input type="text" id="username" name="username" class="username" placeholder="请输入账号">
+	<input type="password" id="password" name="password" class="password" placeholder="请输入密码">
 </form>
 <div>
-	<div>
-		<button type="submit" id="login">登	录</button>
-	</div>
+	<button type="submit" id="login">登	录</button>
 </div>
 </div>
 
@@ -45,9 +39,9 @@
 			$.messager.progress({text:"正在登录..."});
 			var username = $("#username").val();
 			var password = $("#password").val();
-			$.post("${pageContext.request.contextPath }/login.do",{username:username,password:password},function (result){
+			$.post("${pageContext.request.contextPath }/login",{username:username,password:password},function (result){
 				if(result.success){
-					location.href="${pageContext.request.contextPath }/index.do";
+					location.href="${pageContext.request.contextPath }/index";
 				}else{
 					$.messager.progress('close');
 					$.messager.show({

@@ -30,7 +30,6 @@
 				}],
 				panelHeight:'auto'//适配大小
 			});
-			
 			$("[name='pid']").combobox({
 				url:"${pageContext.request.contextPath }/power/getMenu.do",
 				method:"get",
@@ -66,29 +65,25 @@
 		});
   	</script>
     <form class="menu_add_form" id="menu_add_form">
-        <div class="easyui-panel" style="padding:30px 60px;">
-	        <center>
-	            <div class="input_container">
-	                <input label="父类菜单：" name="pid" id="pid" labelPosition="top" style="width:50%;height:52px;">
-	            </div>
-	            <div class="input_container">
-	                <input class="easyui-textbox" label="菜单名称：" name="name" id="name" labelPosition="top" data-options="prompt:'请输入菜单名称',required:true" style="width:50%;height:52px;">
-	            </div>
-	            <div class="input_container">
-	                <input class="easyui-textbox" label="接口路径：" name="url" id="url" labelPosition="top" data-options="prompt:'接口路径'" style="width:50%;height:52px">
-	            </div>
-	            <div class="input_container">
-	                <input class="easyui-combobox" label="是否启用：" name="del" id="del" labelPosition="top" style="width:50%;height:52px;">
-	            </div>
-	            <div class="input_container">
-	                <input label="角色权限：" name="powerids" id="powerids" labelPosition="top" style="width:50%;height:52px;">
-	            </div>
-	            <div>
-	            	<center style="margin-top: 22px;">
-	                	<a href="#" class="easyui-linkbutton" id="menuAddBtn" iconCls="icon-ok" style="width:50%;height:32px">确认提交</a>
-	            	</center>
-	            </div>
-            </center>
+        <div class="easyui-panel" style="padding:30px 60px;" align="center">
+			<div class="input_container">
+				<input label="父类菜单：" name="pid" id="pid" labelPosition="top" style="width:50%;height:52px;">
+			</div>
+			<div class="input_container">
+				<input class="easyui-textbox" label="菜单名称：" name="name" id="name" labelPosition="top" data-options="prompt:'请输入菜单名称',required:true" style="width:50%;height:52px;">
+			</div>
+			<div class="input_container">
+				<input class="easyui-textbox" label="接口路径：" name="url" id="url" labelPosition="top" data-options="prompt:'接口路径'" style="width:50%;height:52px">
+			</div>
+			<div class="input_container">
+				<input class="easyui-combobox" label="是否启用：" name="del" id="del" labelPosition="top" style="width:50%;height:52px;">
+			</div>
+			<div class="input_container">
+				<input label="角色权限：" name="powerids" id="powerids" labelPosition="top" style="width:50%;height:52px;">
+			</div>
+			<div style="margin-top: 22px;" align="center">
+				<a href="#" class="easyui-linkbutton" id="menuAddBtn" iconCls="icon-ok" style="width:50%;height:32px">确认提交</a>
+			</div>
         </div>
     </form>
   </body>
