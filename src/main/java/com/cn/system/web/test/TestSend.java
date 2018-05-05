@@ -14,7 +14,15 @@ import javax.mail.MessagingException;
  */
 public class TestSend
 {
-
+    /**
+     * 注意：个人邮箱作为发送邮箱，必须进行下面设置
+     * 进入邮箱【首页】——>【设置】——>【POP3/SMTP/IMAP】——>【设置POP3/SMTP/IMAP】，
+     * 把【POP3/SMTP服务】和【IMAP/SMTP服务】全部勾上，此时会弹出一个框要你设置（授权码），
+     * 那就去设置，总之，记住这个（授权码），后面用的上。
+     * @param args
+     * @throws MessagingException
+     * @throws IOException
+     */
     public static void main(String[] args) throws MessagingException, IOException
     {
 
@@ -39,7 +47,7 @@ public class TestSend
         mail.setRecipients(list);
         mail.setSubject("测试邮箱,谢谢合作。");
         mail.setDate(new Date());
-        mail.setFrom("MY");
+        mail.setFrom("MY");//来自谁可以是发送邮箱账号也可以设置其他例如：百度推广等等。
 //      mail.setMultipart("D:你你你.txt");//附件
         String html = "<html lang='zh-CN'><head ><meta charset='utf-8'>" +
                 "</head><body>内容：这是我发的第一封Java邮件" +
