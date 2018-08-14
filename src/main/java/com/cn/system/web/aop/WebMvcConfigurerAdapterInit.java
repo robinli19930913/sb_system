@@ -1,16 +1,19 @@
 package com.cn.system.web.aop;
 
+import com.cn.system.web.apiversion.ApiVersionMappingHandlerMapping;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 /**
  * Created by robin on 2018/4/20.
  */
 @Configuration
 public class WebMvcConfigurerAdapterInit extends WebMvcConfigurerAdapter {
+
     @Bean
     HandlerInterceptorInit handlerInterceptorInit(){
         return new HandlerInterceptorInit();

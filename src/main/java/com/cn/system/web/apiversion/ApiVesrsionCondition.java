@@ -63,7 +63,7 @@ public class ApiVesrsionCondition implements RequestCondition<ApiVesrsionConditi
         {
             return this;
         }
-        String v = request.getParameter("version");
+        String v = request.getParameter("v");
         if(StringUtils.isBlank(v))return null;
 
         if(compare(v2int(v),v2int(this.apiVersion))>=0){

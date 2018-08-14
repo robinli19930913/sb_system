@@ -70,6 +70,8 @@ public class HandlerInterceptorInit implements HandlerInterceptor {
         Object object = request.getSession().getAttribute("user");
         if(path.equals("/system/login")
                 ||path.equals("/system/")
+                ||path.equals("/rabbitmq/addRabbitMq")
+                ||path.equals("/version/v")
                 ||path.equals("/system")
                 || object != null) {
             //记录操作开始时间
